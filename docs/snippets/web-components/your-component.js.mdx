@@ -1,0 +1,23 @@
+```js
+// your-component.stories.js
+
+import { html } from 'lit-html';
+
+import './your-component';
+
+// This default export determines where your story goes in the story list
+export default {
+  title: 'YourComponent',
+};
+
+const Template = (
+  /* the args you need here will depend on your component */
+  { aProperty }
+) => html`<your-component .yourProperty=${aProperty}></your-component>`;
+
+export const FirstStory = Template.bind({});
+
+FirstStory.args = {
+  /* the args you need here will depend on your component */
+};
+```
